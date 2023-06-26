@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavBar from "./components/burgerNav/Navbar";
 
-function App() {
+export default function App() {
+
+  const copyRightYear = () => {
+    return new Date().getFullYear()
+  }
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      App
     </div>
+
+    {/*footer section */}
+    <footer>
+      <h3>Kay Truong &copy; <span>{copyRightYear()}</span>. &nbsp;All rights reserved. </h3>&nbsp;
+      <h3> Written in React & CSS3.</h3>
+    </footer>
+      </>
   );
 }
-
-export default App;
