@@ -20,19 +20,19 @@ const StyledBurger = styled.div`
     div {
         width: 2rem;
         height: 0.25rem;
-        background-color: ${({ open }) => open ? '#ccc' : '#333'};
+        background-color: ${({ openBurger }) => openBurger ? '#ccc' : '#333'};
         border-radius: 10px;
         transform-origin: 1px;
         transition: all 0.3s linear;
         &:nth-child(1) {
-        transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+        transform: ${({ openBurger }) => openBurger ? 'rotate(45deg)' : 'rotate(0)'};
         }
         &:nth-child(2) {
-        transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-        opacity: ${({ open }) => open ? 0 : 1};
+        transform: ${({ openBurger }) => openBurger ? 'translateX(100%)' : 'translateX(0)'};
+        opacity: ${({ openBurger }) => openBurger ? 0 : 1};
         }
         &:nth-child(3) {
-        transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+        transform: ${({ openBurger }) => openBurger ? 'rotate(-45deg)' : 'rotate(0)'};
         }
     }
 `;
@@ -45,12 +45,12 @@ const Burger = () => {
     }
     return (
         <>
-        <StyledBurger open={openBurger} onClick={toggleBurger}>        
+        <StyledBurger openBurger={openBurger} onClick={toggleBurger}>        
             <div />
             <div />
             <div />        
         </StyledBurger>
-            <RightNav open={openBurger} />
+            <RightNav openBurger={openBurger} />
         </>    
     )
 } 

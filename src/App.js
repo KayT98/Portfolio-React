@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
     <div className="App">
-      <NavBar />
+     <NavBar />
       <div>
         <h1>Hello! My name is Kay Truong</h1>
         <h2>I&apos;m a Front End Developer at Seminaut Inc</h2>
