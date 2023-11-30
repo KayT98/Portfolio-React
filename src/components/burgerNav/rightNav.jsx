@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
+
 
 const List = styled.ul`
   list-style: none;
@@ -29,13 +31,14 @@ const List = styled.ul`
 `;
 const RightNav = ({openBurger}) => {
     return (
-        <List openBurger={openBurger}>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#code">Coding Projects</a></li>
-            <li><a href="#pts">Photoshop Projects</a></li>
-            <li><a href="#contact">Contact Me!</a></li>
+      <>
+        <List openBurger={openBurger}>   
+            <li><Link to="/">About Me</Link></li>  
+            <li><Link to="/skills">Skills</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/contact">Contact Me!</Link></li>
         </List>
+       </> 
     )
 } 
 
